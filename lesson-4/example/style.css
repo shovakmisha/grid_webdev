@@ -1,0 +1,34 @@
+
+.grid {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(6, [col] 1fr);
+    grid-template-rows: repeat(3, [row] 1fr);
+    grid-gap: 15px;
+}
+
+.grid-item {
+    min-height: 80px;
+    background-color: grey;
+}
+
+.grid-item1 {
+    grid-column: col 1 / col 3;
+}
+
+.grid-item2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item3 {
+    grid-row: span 2;
+}
+
+.grid-item9 {
+    grid-column: col 2 / col 4;
+}
+
+.grid-item10 {
+    grid-column: col 4 / col 6;
+}

@@ -1,0 +1,24 @@
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    border: 1px solid black;
+
+    /* repeat(3, 100px); Раніше я писав так. Але зі свойством auto-fill макет можна робити адаптивним. Він буде аналізувати макет і заповнювати пустий простір */
+    /*grid-template-columns: repeat(auto-fill, 100px); */
+    /* Але справжній адаптив відбувається, коли в діло вступає minmax */
+    grid-template-columns: repeat( auto-fill, minmax(100px, auto)); /* Але і тут є загвоздка. Якщо к-сть колонок буде мала, а контейнер широкий - Цей запис не заповнить весь простір. Щоб заповнив треба використовувати auto-fit замість auto-fill */
+}
+
+.grid-item1 {
+    background-color: red;
+}
+
+.grid-item2 {
+    background-color: green;
+}
+
+.grid-item3 {
+    background-color: blue;
+}
